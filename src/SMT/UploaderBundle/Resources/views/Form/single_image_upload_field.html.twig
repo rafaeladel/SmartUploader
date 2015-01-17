@@ -1,0 +1,16 @@
+{% block single_image_upload_widget %}
+    <div class="form-style form-style-2" id="uploaderWrapper">
+        <div class="user-profile-img thumbnail"><img src="http://placehold.it/60x60/FFF/444" alt="admin"></div>
+        <p class="user-profile-p" style="width: auto;margin-bottom: 5px;">
+            <label>صورتك الرمزيه ( اختياريه )</label>
+        </p>
+        {{ form_widget(form.file) }}
+        <div class="fileinputs">
+            <div class="fakefile">
+                <button type="button" class="button small margin_0">أختار الملف</button>
+                <span data-url="{{ url("smt.uploader_start") }}"  id="uploadBtn" ><i class="icon-arrow-up"></i>تصفح</span>
+            </div>
+        </div>
+    </div>
+    <input name="imagesIds" type="hidden" id="imagesIds"/>
+{% endblock single_image_upload_widget %}

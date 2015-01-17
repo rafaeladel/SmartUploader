@@ -1,0 +1,4 @@
+smt_uploader:
+    resource:   "@SMTUploaderBundle/Controller"
+    type:       annotation
+    prefix:     /smt_uploader
