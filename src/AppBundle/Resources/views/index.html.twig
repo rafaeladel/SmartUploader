@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <form action="" method="post">
+        {{ form_row(form.title) }}
+        {{ form_row(form.content) }}
+        <input type="submit" name="submit" value="submit"/>
+        {{ form_rest(form) }}
+    {{ form_end(form) }}
+{% endblock %}

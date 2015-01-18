@@ -25,7 +25,7 @@ class Image
     protected $id;
 
     /**
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Post", inversedBy="image")
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Post")
      * @ORM\JoinColumn(name="post_id", referencedColumnName="id", onDelete="CASCADE")
      */
     protected $post;
@@ -126,27 +126,4 @@ class Image
     }
 
 
-
-    /**
-     * Set post
-     *
-     * @param \AppBundle\Entity\Post $post
-     * @return Image
-     */
-    public function setPost(\AppBundle\Entity\Post $post = null)
-    {
-        $this->post = $post;
-
-        return $this;
-    }
-
-    /**
-     * Get post
-     *
-     * @return \AppBundle\Entity\Post 
-     */
-    public function getPost()
-    {
-        return $this->post;
-    }
 }
